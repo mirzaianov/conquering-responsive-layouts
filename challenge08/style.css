@@ -152,12 +152,9 @@ ul {
 }
 
 .nav__link--button {
-  display: inline-block;
-  text-decoration: none;
-  text-transform: uppercase;
   color: #136c72;
   background-color: #fff;
-  padding: 0.5em 1em;
+  padding: 0.25em 0.75em;
   border-radius: 100px;
 }
 
@@ -173,10 +170,10 @@ ul {
   position: relative;
 }
 
-/* .row {
-  display: flex;
-  justify-content: space-between;
-} */
+.nav__link:hover,
+.nav__link:focus {
+  opacity: 0.75;
+}
 
 .logo {
   height: 30px;
