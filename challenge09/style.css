@@ -12,6 +12,7 @@
   --color-black: #2e323f;
   --color-dark: #3b4050;
   --color-grey: #6f737f;
+  --color-lightgrey: #e3e3e3;
   --color-white: #ffffff;
   --color-gold: #a59678;
 
@@ -266,7 +267,7 @@ p {
 /* hero - start */
 
 .hero {
-  padding: 10em 0 10em 0;
+  padding: 10em 0;
   background-color: var(--color-dark);
   color: var(--color-white);
 }
@@ -276,11 +277,13 @@ p {
   font-size: var(--fz48);
   line-height: 1.1;
   margin-bottom: 1em;
+  /* text-align: center; */
 }
 
 .hero__text {
   /* font-size: var(--fz18); */
   margin-bottom: 1.5em;
+  /* text-align: center; */
 }
 
 .btn {
@@ -303,6 +306,33 @@ p {
 
 /* hero - end */
 /* --------------------------------------------------------------- */
+/* methods - start */
+
+.methods {
+  padding: 5em 0;
+  background-color: var(--color-lightgrey);
+  color: var(--color-dark);
+}
+
+.methods__item {
+  margin-bottom: 3em;
+}
+
+.methods__title {
+  color: var(--color-gold);
+  text-align: center;
+  margin-bottom: 0.75em;
+  font-family: 'Oswald', sans-serif;
+  font-size: var(--fz30);
+}
+
+.methods__text {
+  text-align: center;
+  font-size: var(--fz18);
+}
+
+/* methods - end */
+/* --------------------------------------------------------------- */
 /* normalization - start */
 
 /**
@@ -320,9 +350,7 @@ p {
 
 /* normalization - end */
 
-/**
-  NOTE: min-width for mibile-first
-*/
+/* ----------------------------------------------------------------- */
 
 @media (min-width: 700px) {
   .header__data {
@@ -347,7 +375,7 @@ p {
   .nav__list {
     display: flex;
     align-items: center;
-    gap: 1em;
+    gap: 2em;
     margin: 0;
   }
 
@@ -391,4 +419,17 @@ p {
   .hero__btn {
     font-size: var(--fz24);
   }
+
+  /* ---------------------------------------------------------------- */
+
+  .methods__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .methods__item {
+    width: 26%;
+  }
+
+  /* ---------------------------------------------------------------- */
 }
