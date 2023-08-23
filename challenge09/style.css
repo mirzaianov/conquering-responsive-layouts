@@ -283,6 +283,7 @@ p {
 .hero__text {
   /* font-size: var(--fz18); */
   margin-bottom: 1.5em;
+  font-size: var(--fz18);
   /* text-align: center; */
 }
 
@@ -291,7 +292,7 @@ p {
   text-decoration: none;
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif;
-  font-size: var(--fz18);
+  font-size: var(--fz24);
   color: var(--color-white);
   font-weight: 900;
   background-color: var(--color-gold);
@@ -332,6 +333,52 @@ p {
 }
 
 /* methods - end */
+/* --------------------------------------------------------------- */
+/* main - start */
+
+.main {
+  padding: 5em 0;
+  color: var(--color-dark);
+}
+
+.main__title {
+  color: var(--color-gold);
+  margin-bottom: 0.75em;
+  font-family: 'Oswald', sans-serif;
+  /* font-size: var(--fz36); */
+  font-size: var(--fz30);
+}
+
+.main__image {
+  margin-bottom: 2em;
+  object-fit: cover;
+}
+
+.main__text {
+  /* font-size: var(--fz21); */
+  font-size: var(--fz18);
+  margin-bottom: 1.5em;
+}
+
+.card {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 2em;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.card__header {
+  margin-bottom: 1em;
+  font-family: 'Oswald', sans-serif;
+  font-size: var(--fz24);
+}
+
+.card__text {
+  font-size: var(--fz18);
+}
+
+/* main - end */
 /* --------------------------------------------------------------- */
 /* normalization - start */
 
@@ -408,6 +455,40 @@ p {
     width: 45%;
     align-self: end;
   }
+
+  /* --------------------------------------------------------------- */
+
+  .methods__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .methods__item {
+    width: 26%;
+  }
+
+  /* --------------------------------------------------------------- */
+
+  .main__title {
+    font-size: var(--fz36);
+  }
+
+  .main__text {
+    font-size: var(--fz21);
+  }
+
+  .main__aside {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .card {
+    width: 30%;
+  }
+
+  .card__header {
+    font-size: var(--fz30);
+  }
 }
 
 @media (min-width: 1000px) {
@@ -422,14 +503,24 @@ p {
 
   /* ---------------------------------------------------------------- */
 
-  .methods__row {
+  /* --------------------------------------------------------------- */
+
+  .main__row {
     display: flex;
     justify-content: space-between;
   }
 
-  .methods__item {
-    width: 26%;
+  .main__article {
+    width: 60%;
   }
 
-  /* ---------------------------------------------------------------- */
+  .main__aside {
+    width: 35%;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .card {
+    width: 100%;
+  }
 }
