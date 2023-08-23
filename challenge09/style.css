@@ -286,7 +286,35 @@ p {
 */
 
 @media (min-width: 700px) {
-  /**/
+  .header__data {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav {
+    visibility: visible;
+    display: flex;
+    height: auto;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav__list {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin: 0;
+  }
+
+  .nav__list--primary {
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: 1000px) {
