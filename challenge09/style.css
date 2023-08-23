@@ -1,11 +1,13 @@
+/* variables - start */
+
 :root {
-  --fz: 16px;
-  --fz18: 18px / var(--fz);
-  --fz21: 21px / var(--fz);
-  --fz24: 24px / var(--fz);
-  --fz30: 30px / var(--fz);
-  --fz36: 36px / var(--fz);
-  --fz90: 90px / var(--fz);
+  --fz18: 1.125rem;
+  --fz21: 1.3125rem;
+  --fz24: 1.5rem;
+  --fz30: 1.875rem;
+  --fz36: 2.25rem;
+  --fz48: 3rem;
+  --fz90: 5.625rem;
 
   --color-black: #2e323f;
   --color-dark: #3b4050;
@@ -13,11 +15,12 @@
   --color-white: #ffffff;
   --color-gold: #a59678;
 
-  --breakpoint-700: 700px;
-  --breakpoint-1000: 1000px;
-
   --container-max-width: 1200px;
 }
+
+/* variables - end */
+
+/* normalization - start */
 
 /**
   Нормализация блочной модели
@@ -107,13 +110,12 @@ body {
   /* line-height: 1.5; */
 }
 
+/* normalization - end */
+
 body {
   font-family: 'Montserrat', sans-serif;
-  font-size: var(--fz);
+  font-weight: 700;
   color: var(--color-black);
-  /**
-    font-family: 'Oswald', sans-serif;
-  */
 }
 
 h1 {
@@ -122,6 +124,7 @@ h1 {
 }
 
 p {
+  font-weight: 400;
   line-height: 1.5;
 }
 
@@ -138,6 +141,13 @@ p {
   justify-content: space-between;
   /* border: 2px solid greenyellow; */
 }
+
+.highlight {
+  color: var(--color-gold);
+}
+
+/* --------------------------------------------------------------- */
+/* header - start */
 
 .header {
   background: var(--color-black);
@@ -229,17 +239,16 @@ p {
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: var(--fz18);
   color: var(--color-white);
-  /* font-size: 1rem; */
-  /* font-weight: 500; */
-  /* line-height: 3; */
   padding: 1em 0;
 }
 
 .nav__link--button {
   color: var(--color-white);
   background-color: var(--color-gold);
-  padding: 0.25em 0.75em;
+  padding: 0.25em 1em;
   border-radius: 100px;
 }
 
@@ -252,14 +261,38 @@ p {
   margin: 1em 0;
 }
 
+/* header - end */
+/* --------------------------------------------------------------- */
+/* hero - start */
+
+.hero {
+  padding: 10em 0 10em 0;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+.hero__header {
+  font-family: 'Oswald', sans-serif;
+  font-size: var(--fz48);
+  line-height: 1.1;
+  margin-bottom: 1em;
+}
+
+.hero__text {
+  /* font-size: var(--fz18); */
+  margin-bottom: 1.5em;
+}
+
 .btn {
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
-  color: #23424a;
+  font-family: 'Oswald', sans-serif;
+  font-size: var(--fz18);
+  color: var(--color-white);
   font-weight: 900;
-  background-color: #38cfd9;
-  padding: 0.75em 2em;
+  background-color: var(--color-gold);
+  padding: 0.25em 1.5em;
   border-radius: 100px;
 }
 
@@ -267,6 +300,10 @@ p {
 .btn:focus {
   opacity: 0.75;
 }
+
+/* hero - end */
+/* --------------------------------------------------------------- */
+/* normalization - start */
 
 /**
   Удаляем все анимации и переходы для людей,
@@ -281,8 +318,10 @@ p {
   }
 }
 
+/* normalization - end */
+
 /**
-  min-width for mibile-first
+  NOTE: min-width for mibile-first
 */
 
 @media (min-width: 700px) {
@@ -312,11 +351,44 @@ p {
     margin: 0;
   }
 
+  .nav__link {
+    padding: 0;
+  }
+
+  .nav__link--button {
+    padding: 0.25em 1em;
+  }
+
   .nav__list--primary {
     margin: 0 auto;
+  }
+
+  /* ---------------------------------------------------------------- */
+
+  .hero__row {
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid greenyellow; */
+  }
+
+  .hero__header {
+    width: 45%;
+    margin: 0;
+  }
+
+  .hero__wrapper {
+    width: 45%;
+    align-self: end;
   }
 }
 
 @media (min-width: 1000px) {
-  /**/
+  .hero__header {
+    font-size: var(--fz90);
+  }
+
+  .hero__text,
+  .hero__btn {
+    font-size: var(--fz24);
+  }
 }
