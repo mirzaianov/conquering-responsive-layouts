@@ -543,6 +543,13 @@ p {
   .card__header {
     font-size: var(--fz30);
   }
+
+  /* --------------------------------------------------------------- */
+
+  .footer__social {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 @media (min-width: 1000px) {
@@ -577,4 +584,21 @@ p {
   }
 
   /* --------------------------------------------------------------- */
+
+  .footer__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer__descr {
+    width: 40%;
+  }
+
+  .footer__social {
+    width: 55%;
+  }
+
+  .footer__social h3 {
+    padding-top: 0;
+  }
 }
